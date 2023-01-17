@@ -1,6 +1,6 @@
 # Contrast and Clustering: Learning Nearest Pair Representations for Source-free Domain Adaptation
-### Our code will be publicly available if the paper is accepted.
 ![image](https://github.com/yukilulu/CaC/blob/main/CaC.png)
+### Our code will be publicly available if the paper is accepted.
 ### The objective function is denoted as:
 ![image](https://github.com/yukilulu/CaC/blob/main/loss.png)
 # Dataset preparing
