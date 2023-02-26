@@ -1,4 +1,4 @@
-# Contrast and Clustering: Learning Nearest Pair Representations for Source-free Domain Adaptation
+## Code (based on pytorch 1.3, cuda 10.0, please check the 'requirements.txt' for reproducing the results) for our paper 'Contrast and Clustering: Learning Nearest Pair Representations for Source-free Domain Adaptation'.
 ![image](https://github.com/yukilulu/CaC/blob/main/CaC.png)
 ### Our code will be publicly available if the paper is accepted.
 ### The objective function is denoted as:
