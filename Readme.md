@@ -7,7 +7,8 @@ Download the [VisDA](http://ai.bu.edu/visda-2017/),
 [Office-31](https://github.com/jindongwang/transferlearning/blob/master/data/dataset.md#office-31)
 # Step2: Environment preparing
 ### check the 'requirements.txt' for reproducing the results
-# Step3: Go to 'Visda' folder and get the training code
+# Step3: Training
+### Go to 'Visda' folder and get the training code
 # Accuracy
 ![image](https://github.com/yukilulu/CaC/blob/main/img/visda.png)
 ![image](https://github.com/yukilulu/CaC/blob/main/img/oh.png)
