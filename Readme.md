@@ -1,10 +1,13 @@
 ## Code (based on pytorch 1.3, cuda 10.0, please check the 'requirements.txt' for reproducing the results) for our paper 'Contrast and Clustering: Learning Nearest Pair Representations for Source-free Domain Adaptation'.
 ![image](https://github.com/yukilulu/CaC/blob/main/CaC.png)
 ### Our code is publicly available now!
-# Dataset preparing
+# Step1: Dataset preparing
 Download the [VisDA](http://ai.bu.edu/visda-2017/),
 [Office-Home](https://www.hemanthdv.org/officeHomeDataset.html), and
 [Office-31](https://github.com/jindongwang/transferlearning/blob/master/data/dataset.md#office-31)
+# Step2: Environment preparing
+### check the 'requirements.txt' for reproducing the results
+# Step3: Go to 'Visda' folder and get the training code
 # Accuracy
 ![image](https://github.com/yukilulu/CaC/blob/main/img/visda.png)
 ![image](https://github.com/yukilulu/CaC/blob/main/img/oh.png)
