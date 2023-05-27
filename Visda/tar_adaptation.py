@@ -309,15 +309,21 @@ def train_target(args):
 
             # The nearest neighbors of sample x in the current batch have matching conditions
             match = (idx_double.unsqueeze(-1) == tar_idx_.cuda()).long()
-
-            #‘idx_match_in_cur’ is the index corresponding to this x
-            idx_match_in_cur = match[0]
-
-            # ‘idx_match_project_cur’: The nearest neighbor of x is equal to the index corresponding to the tar_idx
-            idx_match_project_cur = match[-1]
+            
+            # match is a tuple
+            match = torch.where(match>0.)
+            
+            # If sample in the current batch x occur in the an extended neighbors
+            # 'idx_match_in_cur' is the index corresponding to this x
+            idx_match_in_cur = match[-1]
+            # 'expand_idx_match_project_cur': is the index corresponding to the x in the expanded neighbor pool
+            expand_idx_match_project_cur = match[0]
+            # match[1] is the index of the first level nearest neighbor
+            # match[2] is the index of the second level nearest neighbor, that is, the extended neighbor
             # first_k = match[1]
+            
             weight = torch.ones(bs, bs).cuda()
-            weight[idx_match_in_cur, idx_match_project_cur] = 0.0
+            weight[idx_match_in_cur, expand_idx_match_project_cur] = 0.0
 
         dot = torch.matmul(score_bank[indices[:,1:]],softmax_out.transpose(0,1)).transpose(0,1) #[k,b,b]
         near = torch.diagonal(dot, dim1=1, dim2=2).sum(0)  # ([k,b])->([5, 64])
